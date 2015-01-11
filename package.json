@@ -2,7 +2,7 @@
   "name": "amber-attic",
   "title": "Amber legacy items",
   "description": "Legacy IDE and a few other old non-core packages",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "homepage": "",
   "author": {
     "name": "Herbert Vojčík",
