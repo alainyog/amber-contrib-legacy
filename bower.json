@@ -30,7 +30,8 @@
     "dependencies": {
         "amber": "^0.14.0",
         "jquery-ui": ">=1.9.2",
-        "codemirror": "^4.7.0"
+        "codemirror": "^4.7.0",
+        "require-css": "^0.1.2"
     },
     "devDependencies": {
         "amber-ide-starter-dialog": "^0.1.0",
