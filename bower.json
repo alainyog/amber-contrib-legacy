@@ -1,7 +1,7 @@
 {
     "name": "amber-attic",
     "description": "Legacy IDE and a few other old non-core packages",
-    "version": "0.1.1",
+    "version": "0.1.2",
     "ignore": [
         "**/.*",
         "node_modules",
