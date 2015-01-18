@@ -1,6 +1,7 @@
 define("amber-attic/IDE", ["amber/boot", "amber_core/Web", "amber_core/Kernel-Objects", "amber_core/Kernel-Collections", "amber_core/Kernel-Methods"], function($boot){
 var $core=$boot.api,nil=$boot.nil,$recv=$boot.asReceiver,$globals=$boot.globals;
 $core.addPackage('IDE');
+$core.packages["IDE"].innerEval = function (expr) { return eval(expr); };
 $core.packages["IDE"].transport = {"type":"amd","amdNamespace":"amber-attic"};
 
 $core.addClass('ClassesList', $globals.Widget, ['browser', 'ul', 'nodes'], 'IDE');
