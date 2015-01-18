@@ -1,5 +1,17 @@
 'use strict';
 
+var fs = require('fs'),
+    path = require('path');
+
+function findAmberPath(options) {
+    var result;
+    options.some(function (x) {
+        var candidate = path.join(__dirname, x);
+        return fs.existsSync(path.join(candidate, 'support/boot.js')) && (result = candidate);
+    });
+    return result;
+}
+
 module.exports = function (grunt) {
     var path = require('path');
 
@@ -24,7 +36,7 @@ module.exports = function (grunt) {
         // task configuration
         amberc: {
             options: {
-                amber_dir: path.join(__dirname, "bower_components", "amber"),
+                amber_dir: findAmberPath(['../..', 'bower_components/amber']),
                 library_dirs: ['src'],
                 closure_jar: ''
             },
