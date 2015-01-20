@@ -28,13 +28,14 @@
     ],
     "private": false,
     "dependencies": {
-        "amber": "^0.14.0",
+        "amber": ">=0.14.1",
         "jquery-ui": ">=1.9.2",
         "codemirror": "^4.7.0",
         "require-css": "^0.1.2"
     },
     "devDependencies": {
         "amber-ide-starter-dialog": "^0.1.0",
+        "amber": ">=0.14.3",
         "helios": "^0.3.2"
     }
 }

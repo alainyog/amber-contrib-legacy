@@ -1,11 +1,6 @@
 {
     "paths": {
         "amber-attic": "src",
-        "amber-attic/resources": "resources",
-        "amber-attic/IDE.private": "support/IDE.private"
-    },
-    "map": {
-        "*": {"amber-attic/IDE": "amber-attic/IDE.private"},
-        "amber-attic/IDE.private":{"amber-attic/IDE": "amber-attic/IDE"}
+        "amber-attic/resources": "resources"
     }
 }
