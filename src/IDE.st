@@ -857,7 +857,7 @@ compileMethodDefinition
 !
 
 compileMethodDefinitionFor: aClass
-	| compiler method source node |
+	| compiler package method compiledSource source node |
 	source := sourceArea val.
 	selectedProtocol ifNil: [ selectedProtocol := selectedMethod protocol ].
 	compiler := Compiler new.
@@ -865,8 +865,9 @@ compileMethodDefinitionFor: aClass
 	node := compiler parse: source.
 	node isParseFailure ifTrue: [
 	^ self alert: 'PARSE ERROR: ', node reason, ', position: ', node position asString ].
-	compiler currentClass: aClass.
-	method := compiler eval: (compiler compileNode: node).
+	package := aClass packageOfProtocol: selectedProtocol.
+	compiledSource := compiler compileNode: node forClass: aClass package: package.
+	method := compiler eval: compiledSource forPackage: package.
 	compiler unknownVariables do: [ :each |
 		"Do not try to redeclare javascript's objects"
 		(PlatformInterface existsGlobal: each) ifFalse: [
