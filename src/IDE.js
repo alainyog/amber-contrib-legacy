@@ -1,4 +1,12 @@
-define("amber-attic/IDE", ["amber/boot", "codemirror/lib/codemirror", "codemirror/mode/smalltalk/smalltalk", "codemirror/addon/hint/show-hint", "css!codemirror/theme/ambiance", "css!codemirror/lib/codemirror", "css!codemirror/addon/hint/show-hint", "jquery-ui", "css!./resources/amber", "amber_core/Web", "amber_core/Kernel-Objects", "amber_core/Kernel-Collections", "amber_core/Kernel-Methods"], function($boot){
+define("amber-attic/IDE", ["amber/boot"
+//>>excludeStart("imports", pragmas.excludeImports);
+, "codemirror/addon/hint/show-hint", "codemirror/lib/codemirror", "codemirror/mode/smalltalk/smalltalk", "css!./resources/amber", "css!codemirror/addon/hint/show-hint", "css!codemirror/lib/codemirror", "css!codemirror/theme/ambiance", "jquery-ui"
+//>>excludeEnd("imports");
+, "amber_core/Web", "amber_core/Kernel-Objects", "amber_core/Kernel-Collections", "amber_core/Kernel-Methods"], function($boot
+//>>excludeStart("imports", pragmas.excludeImports);
+
+//>>excludeEnd("imports");
+){
 var $core=$boot.api,nil=$boot.nil,$recv=$boot.asReceiver,$globals=$boot.globals;
 $core.addPackage('IDE');
 $core.packages["IDE"].innerEval = function (expr) { return eval(expr); };
@@ -3444,7 +3452,7 @@ selector: "compileMethodDefinitionFor:",
 protocol: 'actions',
 fn: function (aClass){
 var self=this;
-var compiler,method,source,node;
+var compiler,package_,method,compiledSource,source,node;
 function $Compiler(){return $globals.Compiler||(typeof Compiler=="undefined"?nil:Compiler)}
 function $PlatformInterface(){return $globals.PlatformInterface||(typeof PlatformInterface=="undefined"?nil:PlatformInterface)}
 function $ClassBuilder(){return $globals.ClassBuilder||(typeof ClassBuilder=="undefined"?nil:ClassBuilder)}
@@ -3485,8 +3493,9 @@ $ctx1.sendIdx[","]=1;
 $3=self._alert_($4);
 return $3;
 };
-$recv(compiler)._currentClass_(aClass);
-method=$recv(compiler)._eval_($recv(compiler)._compileNode_(node));
+package_=$recv(aClass)._packageOfProtocol_(self["@selectedProtocol"]);
+compiledSource=$recv(compiler)._compileNode_forClass_package_(node,aClass,package_);
+method=$recv(compiler)._eval_forPackage_(compiledSource,package_);
 $recv($recv(compiler)._unknownVariables())._do_((function(each){
 //>>excludeStart("ctx", pragmas.excludeDebugContexts);
 return $core.withContext(function($ctx2) {
@@ -3515,15 +3524,15 @@ return self;
 }
 catch(e) {if(e===$early)return e[0]; throw e}
 //>>excludeStart("ctx", pragmas.excludeDebugContexts);
-}, function($ctx1) {$ctx1.fill(self,"compileMethodDefinitionFor:",{aClass:aClass,compiler:compiler,method:method,source:source,node:node},$globals.Browser)});
+}, function($ctx1) {$ctx1.fill(self,"compileMethodDefinitionFor:",{aClass:aClass,compiler:compiler,package_:package_,method:method,compiledSource:compiledSource,source:source,node:node},$globals.Browser)});
 //>>excludeEnd("ctx");
 },
 //>>excludeStart("ide", pragmas.excludeIdeData);
 args: ["aClass"],
-source: "compileMethodDefinitionFor: aClass\x0a\x09| compiler method source node |\x0a\x09source := sourceArea val.\x0a\x09selectedProtocol ifNil: [ selectedProtocol := selectedMethod protocol ].\x0a\x09compiler := Compiler new.\x0a\x09compiler source: source.\x0a\x09node := compiler parse: source.\x0a\x09node isParseFailure ifTrue: [\x0a\x09^ self alert: 'PARSE ERROR: ', node reason, ', position: ', node position asString ].\x0a\x09compiler currentClass: aClass.\x0a\x09method := compiler eval: (compiler compileNode: node).\x0a\x09compiler unknownVariables do: [ :each |\x0a\x09\x09\x22Do not try to redeclare javascript's objects\x22\x0a\x09\x09(PlatformInterface existsGlobal: each) ifFalse: [\x0a\x09\x09(self confirm: 'Declare ''', each, ''' as instance variable?') ifTrue: [\x0a\x09\x09\x09self addInstanceVariableNamed: each toClass: aClass.\x0a\x09\x09\x09^ self compileMethodDefinitionFor: aClass ]] ].\x0a\x09ClassBuilder new installMethod: method forClass: aClass protocol: selectedProtocol.\x0a\x09self updateMethodsList.\x0a\x09self selectMethod: method",
+source: "compileMethodDefinitionFor: aClass\x0a\x09| compiler package method compiledSource source node |\x0a\x09source := sourceArea val.\x0a\x09selectedProtocol ifNil: [ selectedProtocol := selectedMethod protocol ].\x0a\x09compiler := Compiler new.\x0a\x09compiler source: source.\x0a\x09node := compiler parse: source.\x0a\x09node isParseFailure ifTrue: [\x0a\x09^ self alert: 'PARSE ERROR: ', node reason, ', position: ', node position asString ].\x0a\x09package := aClass packageOfProtocol: selectedProtocol.\x0a\x09compiledSource := compiler compileNode: node forClass: aClass package: package.\x0a\x09method := compiler eval: compiledSource forPackage: package.\x0a\x09compiler unknownVariables do: [ :each |\x0a\x09\x09\x22Do not try to redeclare javascript's objects\x22\x0a\x09\x09(PlatformInterface existsGlobal: each) ifFalse: [\x0a\x09\x09(self confirm: 'Declare ''', each, ''' as instance variable?') ifTrue: [\x0a\x09\x09\x09self addInstanceVariableNamed: each toClass: aClass.\x0a\x09\x09\x09^ self compileMethodDefinitionFor: aClass ]] ].\x0a\x09ClassBuilder new installMethod: method forClass: aClass protocol: selectedProtocol.\x0a\x09self updateMethodsList.\x0a\x09self selectMethod: method",
 referencedClasses: ["Compiler", "PlatformInterface", "ClassBuilder"],
 //>>excludeEnd("ide");
-messageSends: ["val", "ifNil:", "protocol", "new", "source:", "parse:", "ifTrue:", "isParseFailure", "alert:", ",", "reason", "asString", "position", "currentClass:", "eval:", "compileNode:", "do:", "unknownVariables", "ifFalse:", "existsGlobal:", "confirm:", "addInstanceVariableNamed:toClass:", "compileMethodDefinitionFor:", "installMethod:forClass:protocol:", "updateMethodsList", "selectMethod:"]
+messageSends: ["val", "ifNil:", "protocol", "new", "source:", "parse:", "ifTrue:", "isParseFailure", "alert:", ",", "reason", "asString", "position", "packageOfProtocol:", "compileNode:forClass:package:", "eval:forPackage:", "do:", "unknownVariables", "ifFalse:", "existsGlobal:", "confirm:", "addInstanceVariableNamed:toClass:", "compileMethodDefinitionFor:", "installMethod:forClass:protocol:", "updateMethodsList", "selectMethod:"]
 }),
 $globals.Browser);
 

@@ -28,7 +28,7 @@
     ],
     "private": false,
     "dependencies": {
-        "amber": ">=0.14.1",
+        "amber": ">=0.14.4",
         "jquery-ui": ">=1.9.2",
         "codemirror": "^4.7.0",
         "require-css": "^0.1.2"
