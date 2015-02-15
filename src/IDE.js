@@ -2,7 +2,7 @@ define("amber-attic/IDE", ["amber/boot"
 //>>excludeStart("imports", pragmas.excludeImports);
 , "codemirror/addon/hint/show-hint", "codemirror/lib/codemirror", "codemirror/mode/smalltalk/smalltalk", "css!./resources/amber", "css!codemirror/addon/hint/show-hint", "css!codemirror/lib/codemirror", "css!codemirror/theme/ambiance", "jquery-ui"
 //>>excludeEnd("imports");
-, "amber_core/Web", "amber_core/Kernel-Objects", "amber_core/Kernel-Collections", "amber_core/Kernel-Methods"], function($boot
+, "amber-contrib-web/Web", "amber_core/Kernel-Objects", "amber_core/Kernel-Collections", "amber_core/Kernel-Methods"], function($boot
 //>>excludeStart("imports", pragmas.excludeImports);
 
 //>>excludeEnd("imports");
