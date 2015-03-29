@@ -1,4 +1,4 @@
-define("amber-attic/IDE", ["amber/boot"
+define("amber/legacy/IDE", ["amber/boot"
 //>>excludeStart("imports", pragmas.excludeImports);
 , "codemirror/addon/hint/show-hint", "codemirror/lib/codemirror", "codemirror/mode/smalltalk/smalltalk", "css!./resources/amber", "css!codemirror/addon/hint/show-hint", "css!codemirror/lib/codemirror", "css!codemirror/theme/ambiance", "jquery-ui"
 //>>excludeEnd("imports");
@@ -11,7 +11,7 @@ var $core=$boot.api,nil=$boot.nil,$recv=$boot.asReceiver,$globals=$boot.globals;
 $core.addPackage('IDE');
 $core.packages["IDE"].innerEval = function (expr) { return eval(expr); };
 $core.packages["IDE"].imports = ["codemirror/addon/hint/show-hint", "codemirror/lib/codemirror", "codemirror/mode/smalltalk/smalltalk", "css!./resources/amber", "css!codemirror/addon/hint/show-hint", "css!codemirror/lib/codemirror", "css!codemirror/theme/ambiance", "jquery-ui"];
-$core.packages["IDE"].transport = {"type":"amd","amdNamespace":"amber-attic"};
+$core.packages["IDE"].transport = {"type":"amd","amdNamespace":"amber/legacy"};
 
 $core.addClass('ClassesList', $globals.Widget, ['browser', 'ul', 'nodes'], 'IDE');
 $core.addMethod(

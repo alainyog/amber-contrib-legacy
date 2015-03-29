@@ -1,5 +1,5 @@
 {
-  "name": "amber-attic",
+  "name": "amber-contrib-legacy",
   "title": "Amber legacy items",
   "description": "Legacy IDE and a few other old non-core packages",
   "version": "0.1.6",
@@ -10,7 +10,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git://guthub.com/amber-smalltalk/amber-attic.git"
+    "url": "git://github.com/amber-smalltalk/amber-contrib-legacy.git"
   },
   "licenses": [
     {

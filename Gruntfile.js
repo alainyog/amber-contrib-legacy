@@ -45,7 +45,7 @@ module.exports = function (grunt) {
                     'src/Benchfib.st', 'src/Examples.st', 'src/IDE.st' // list all sources in dependency order
                     // list all tests in dependency order
                 ],
-                amd_namespace: 'amber-attic',
+                amd_namespace: 'amber/legacy',
                 libraries: ['Web']
             }
         },

@@ -13,7 +13,7 @@
       require(['app'], function (amber) {
           amber.initialize({
             //used for all new packages in IDE
-            'transport.defaultAmdNamespace': "amber-attic"
+            'transport.defaultAmdNamespace': "amber/legacy"
           });
           require(["amber-ide-starter-dialog"], function (dlg) { dlg.start(); });
       });

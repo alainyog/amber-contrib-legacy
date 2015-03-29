@@ -1,8 +1,8 @@
-define("amber-attic/Benchfib", ["amber/boot", "amber_core/Kernel-Objects"], function($boot){
+define("amber/legacy/Benchfib", ["amber/boot", "amber_core/Kernel-Objects"], function($boot){
 var $core=$boot.api,nil=$boot.nil,$recv=$boot.asReceiver,$globals=$boot.globals;
 $core.addPackage('Benchfib');
 $core.packages["Benchfib"].innerEval = function (expr) { return eval(expr); };
-$core.packages["Benchfib"].transport = {"type":"amd","amdNamespace":"amber-attic"};
+$core.packages["Benchfib"].transport = {"type":"amd","amdNamespace":"amber/legacy"};
 
 $core.addClass('Benchfib', $globals.Object, [], 'Benchfib');
 

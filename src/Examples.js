@@ -1,8 +1,8 @@
-define("amber-attic/Examples", ["amber/boot", "amber/web/Web"], function($boot){
+define("amber/legacy/Examples", ["amber/boot", "amber/web/Web"], function($boot){
 var $core=$boot.api,nil=$boot.nil,$recv=$boot.asReceiver,$globals=$boot.globals;
 $core.addPackage('Examples');
 $core.packages["Examples"].innerEval = function (expr) { return eval(expr); };
-$core.packages["Examples"].transport = {"type":"amd","amdNamespace":"amber-attic"};
+$core.packages["Examples"].transport = {"type":"amd","amdNamespace":"amber/legacy"};
 
 $core.addClass('Counter', $globals.Widget, ['count', 'header'], 'Examples');
 //>>excludeStart("ide", pragmas.excludeIdeData);
