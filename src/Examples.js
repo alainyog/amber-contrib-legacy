@@ -1,4 +1,4 @@
-define("amber-attic/Examples", ["amber/boot", "amber-contrib-web/Web"], function($boot){
+define("amber-attic/Examples", ["amber/boot", "amber/web/Web"], function($boot){
 var $core=$boot.api,nil=$boot.nil,$recv=$boot.asReceiver,$globals=$boot.globals;
 $core.addPackage('Examples');
 $core.packages["Examples"].innerEval = function (expr) { return eval(expr); };
