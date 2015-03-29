@@ -2,7 +2,7 @@
   "name": "amber-contrib-legacy",
   "title": "Amber legacy items",
   "description": "Legacy IDE and a few other old non-core packages",
-  "version": "0.1.6",
+  "version": "0.2.0",
   "homepage": "",
   "author": {
     "name": "Herbert Vojčík",
