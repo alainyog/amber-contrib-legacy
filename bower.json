@@ -1,7 +1,7 @@
 {
     "name": "amber-attic",
     "description": "Legacy IDE and a few other old non-core packages",
-    "version": "0.1.5",
+    "version": "0.1.6",
     "ignore": [
         "**/.*",
         "node_modules",
@@ -28,7 +28,7 @@
     ],
     "private": false,
     "dependencies": {
-        "amber": ">=0.14.10",
+        "amber": ">=0.14.10 <=0.14.12",
         "jquery-ui": ">=1.9.2",
         "codemirror": "^4.7.0",
         "require-css": "^0.1.2"
