@@ -870,7 +870,7 @@ compileMethodDefinitionFor: aClass
 	method := compiler eval: compiledSource forPackage: package.
 	compiler unknownVariables do: [ :each |
 		"Do not try to redeclare javascript's objects"
-		(PlatformInterface existsGlobal: each) ifFalse: [
+		(Smalltalk existsJsGlobal: each) ifFalse: [
 		(self confirm: 'Declare ''', each, ''' as instance variable?') ifTrue: [
 			self addInstanceVariableNamed: each toClass: aClass.
 			^ self compileMethodDefinitionFor: aClass ]] ].
