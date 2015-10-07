@@ -6,7 +6,7 @@ define("amber/legacy/IDE", ["amber/boot"
 //>>excludeStart("imports", pragmas.excludeImports);
 
 //>>excludeEnd("imports");
-){
+){"use strict";
 var $core=$boot.api,nil=$boot.nil,$recv=$boot.asReceiver,$globals=$boot.globals;
 $core.addPackage('IDE');
 $core.packages["IDE"].innerEval = function (expr) { return eval(expr); };

@@ -6,19 +6,12 @@
         "**/.*",
         "node_modules",
         "bower_components",
-        "/test_runner.js",
-        "/config.js",
-        "/the.js",
+        "/*.js",
+        "/*.html",
         "test",
         "tests"
     ],
-    "authors": [
-        {
-            "name": "Herbert Vojčík",
-            "email": "herby@mailbox.sk"
-        }
-    ],
-    "homepage": "",
+    "homepage": "https://github.com/amber-smalltalk/amber-contrib-legacy",
     "keywords": [
         "Amber",
         "Smalltalk"
@@ -35,7 +28,8 @@
         "require-css": "^0.1.2"
     },
     "devDependencies": {
+        "amber": ">=0.14.17",
         "amber-ide-starter-dialog": "^0.1.0",
-        "helios": ">=0.5.0"
+        "helios": ">=0.5.3"
     }
 }
