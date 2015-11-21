@@ -41,26 +41,25 @@ var self=this;
 //>>excludeStart("ctx", pragmas.excludeDebugContexts);
 return $core.withContext(function($ctx1) {
 //>>excludeEnd("ctx");
-var $2,$5,$4,$3,$1;
-$2=self.__lt((2));
-if($core.assert($2)){
-$1=(1);
+var $1,$4,$3,$2;
+$1=self.__lt((2));
+if($core.assert($1)){
+return (1);
 } else {
-$5=self.__minus((1));
+$4=self.__minus((1));
 //>>excludeStart("ctx", pragmas.excludeDebugContexts);
 $ctx1.sendIdx["-"]=1;
 //>>excludeEnd("ctx");
-$4=$recv($5)._benchFib();
+$3=$recv($4)._benchFib();
 //>>excludeStart("ctx", pragmas.excludeDebugContexts);
 $ctx1.sendIdx["benchFib"]=1;
 //>>excludeEnd("ctx");
-$3=$recv($4).__plus($recv(self.__minus((2)))._benchFib());
-$1=$recv($3).__plus((1));
+$2=$recv($3).__plus($recv(self.__minus((2)))._benchFib());
+return $recv($2).__plus((1));
 //>>excludeStart("ctx", pragmas.excludeDebugContexts);
 $ctx1.sendIdx["+"]=1;
 //>>excludeEnd("ctx");
 };
-return $1;
 //>>excludeStart("ctx", pragmas.excludeDebugContexts);
 }, function($ctx1) {$ctx1.fill(self,"benchFib",{},$globals.Number)});
 //>>excludeEnd("ctx");
@@ -85,7 +84,7 @@ function $Array(){return $globals.Array||(typeof Array=="undefined"?nil:Array)}
 //>>excludeStart("ctx", pragmas.excludeDebugContexts);
 return $core.withContext(function($ctx1) {
 //>>excludeEnd("ctx");
-var $1,$2;
+var $1;
 size=(8190);
 (1)._to_do_(self,(function(iter){
 //>>excludeStart("ctx", pragmas.excludeDebugContexts);
@@ -156,8 +155,7 @@ return count;
 //>>excludeStart("ctx", pragmas.excludeDebugContexts);
 $ctx1.sendIdx["to:do:"]=1;
 //>>excludeEnd("ctx");
-$2=count;
-return $2;
+return count;
 //>>excludeStart("ctx", pragmas.excludeDebugContexts);
 }, function($ctx1) {$ctx1.fill(self,"benchmark",{size:size,flags:flags,prime:prime,k:k,count:count},$globals.Number)});
 //>>excludeEnd("ctx");
