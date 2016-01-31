@@ -80,7 +80,6 @@ protocol: '*Benchfib',
 fn: function (){
 var self=this;
 var size,flags,prime,k,count;
-function $Array(){return $globals.Array||(typeof Array=="undefined"?nil:Array)}
 //>>excludeStart("ctx", pragmas.excludeDebugContexts);
 return $core.withContext(function($ctx1) {
 //>>excludeEnd("ctx");
@@ -92,7 +91,7 @@ return $core.withContext(function($ctx2) {
 //>>excludeEnd("ctx");
 count=(0);
 count;
-flags=$recv($Array())._new();
+flags=$recv($globals.Array)._new();
 flags;
 $recv(size)._timesRepeat_((function(){
 //>>excludeStart("ctx", pragmas.excludeDebugContexts);
@@ -248,7 +247,6 @@ protocol: '*Benchfib',
 fn: function (){
 var self=this;
 var t1,t2,r,n1,n2;
-function $Date(){return $globals.Date||(typeof Date=="undefined"?nil:Date)}
 //>>excludeStart("ctx", pragmas.excludeDebugContexts);
 return $core.withContext(function($ctx1) {
 //>>excludeEnd("ctx");
@@ -258,7 +256,7 @@ $recv((function(){
 //>>excludeStart("ctx", pragmas.excludeDebugContexts);
 return $core.withContext(function($ctx2) {
 //>>excludeEnd("ctx");
-t1=$recv($Date())._millisecondsToRun_((function(){
+t1=$recv($globals.Date)._millisecondsToRun_((function(){
 //>>excludeStart("ctx", pragmas.excludeDebugContexts);
 return $core.withContext(function($ctx3) {
 //>>excludeEnd("ctx");
@@ -299,7 +297,7 @@ $recv((function(){
 //>>excludeStart("ctx", pragmas.excludeDebugContexts);
 return $core.withContext(function($ctx2) {
 //>>excludeEnd("ctx");
-t2=$recv($Date())._millisecondsToRun_((function(){
+t2=$recv($globals.Date)._millisecondsToRun_((function(){
 //>>excludeStart("ctx", pragmas.excludeDebugContexts);
 return $core.withContext(function($ctx3) {
 //>>excludeEnd("ctx");
@@ -370,7 +368,6 @@ protocol: '*Benchfib',
 fn: function (){
 var self=this;
 var t1,t2,r,n1,n2;
-function $Date(){return $globals.Date||(typeof Date=="undefined"?nil:Date)}
 //>>excludeStart("ctx", pragmas.excludeDebugContexts);
 return $core.withContext(function($ctx1) {
 //>>excludeEnd("ctx");
@@ -380,7 +377,7 @@ $recv((function(){
 //>>excludeStart("ctx", pragmas.excludeDebugContexts);
 return $core.withContext(function($ctx2) {
 //>>excludeEnd("ctx");
-t1=$recv($Date())._millisecondsToRun_((function(){
+t1=$recv($globals.Date)._millisecondsToRun_((function(){
 //>>excludeStart("ctx", pragmas.excludeDebugContexts);
 return $core.withContext(function($ctx3) {
 //>>excludeEnd("ctx");
@@ -421,7 +418,7 @@ $recv((function(){
 //>>excludeStart("ctx", pragmas.excludeDebugContexts);
 return $core.withContext(function($ctx2) {
 //>>excludeEnd("ctx");
-t2=$recv($Date())._millisecondsToRun_((function(){
+t2=$recv($globals.Date)._millisecondsToRun_((function(){
 //>>excludeStart("ctx", pragmas.excludeDebugContexts);
 return $core.withContext(function($ctx3) {
 //>>excludeEnd("ctx");
