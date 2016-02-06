@@ -21,14 +21,14 @@
     ],
     "private": false,
     "dependencies": {
-        "amber": ">0.14.17",
-        "amber-contrib-web": ">=0.1.0",
+        "amber": ">=0.15.0",
+        "amber-contrib-web": ">=0.3.0",
         "jquery-ui": ">=1.9.2",
         "codemirror": "^5.10.0",
         "require-css": "^0.1.2"
     },
     "devDependencies": {
         "amber-ide-starter-dialog": "^0.1.0",
-        "helios": ">=0.5.3"
+        "helios": ">=0.6.0"
     }
 }
