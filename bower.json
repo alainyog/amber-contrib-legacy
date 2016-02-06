@@ -1,7 +1,6 @@
 {
     "name": "amber-contrib-legacy",
     "description": "Legacy IDE and a few other old non-core packages",
-    "version": "0.2.1",
     "ignore": [
         "**/.*",
         "node_modules",
