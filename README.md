@@ -2,6 +2,33 @@
 
 Legacy IDE and a few other old non-core packages
 
+MOVED
+====
+
+Amber is now at https://lolg.it/amber/amber-contrib-legacy.
+
+.
+
+.
+
+.
+
+.
+
+.
+
+.
+
+.
+
+.
+
+.
+
+.
+
+.
+
 ## Getting Started
 
 To bring project alive (for example after `git clone`):
