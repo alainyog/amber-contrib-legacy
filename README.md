@@ -5,7 +5,7 @@ Legacy IDE and a few other old non-core packages
 MOVED
 ====
 
-Amber is now at https://lolg.it/amber/amber-contrib-legacy.
+Now at https://lolg.it/amber/amber-contrib-legacy.
 
 .
 
